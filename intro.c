@@ -1,23 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int num;
-    float f;
-    char ch;
+    double num;
 
-    printf("Enter an integer: ");
-    scanf("%d", &num);
+    printf("Enter a double value: ");
+    scanf("%lf", &num);
 
-    printf("Enter a float: ");
-    scanf("%f", &f);
-
-    printf("Enter a character: ");
-    scanf(" %c", &ch);
-
-    printf("\nYou entered:\n");
-    printf("Integer: %d\n", num);
-    printf("Float: %f\n", f);
-    printf("Character: %c\n", ch);
+    printf("Default precision: %lf\n", num);
+    printf("Two decimal places: %.2lf\n", num);
+    printf("Five decimal places: %.5lf\n", num);
 
     return 0;
 }
