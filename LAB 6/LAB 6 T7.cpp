@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float a, b;
+
+    do {
+        printf("\n1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if(choice == 1) {
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            printf("Result = %.2f\n", a + b);
+        }
+        else if(choice == 2) {
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            printf("Result = %.2f\n", a - b);
+        }
+
+    } while(choice != 3);
+
+    printf("Calculator closed.\n");
+
+    return 0;
+}

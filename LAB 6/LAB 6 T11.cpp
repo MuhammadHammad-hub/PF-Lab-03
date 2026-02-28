@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float price, total = 0;
+    int choice;
+
+    do {
+        printf("Enter product price: ");
+        scanf("%f", &price);
+
+        total += price;
+
+        printf("Add another product? (1=Yes, 0=No): ");
+        scanf("%d", &choice);
+
+    } while(choice == 1);
+
+    if(total > 5000) {
+        total = total - (total * 0.05);
+        printf("5%% discount applied.\n");
+    }
+
+    printf("Final Payable Amount = %.2f\n", total);
+
+    return 0;
+}
